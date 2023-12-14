@@ -8,10 +8,19 @@ import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
 import PersonIcon from '@mui/icons-material/Person';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
     const backgroundImageUrl = 'https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz';
+
+    const navigate=useNavigate();
+
+    function register(){
+
+        navigate("/register");
+
+    }
     return (
         <div className='max-w-screen flex flex-col justify-between'>
 
@@ -57,11 +66,7 @@ const Login = () => {
                                         </span>
                                     </button>
 
-                                    <p className="mt-6 text-xs text-gray-600 text-center"> I agree to abide by Nivaran
-                                        <a href="#" className="border-b border-gray-500 border-dotted"> Terms of Service </a>
-                                        & its
-                                        <a href="#" className="border-b border-gray-500 border-dotted"> Privacy Policy</a>
-                                    </p>
+                                    <button className="w-72 h-7 opacity-70 text-center text-teal-800 text-2xl font-normal font-['Lato']" onClick={register}>New user? Sign up.</button>
 
                                 </div>
                             </div>
