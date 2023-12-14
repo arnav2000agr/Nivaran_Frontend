@@ -6,9 +6,9 @@ import Register from './Pages/Register';
 
 const App = () => {
   return (
-    <div className="App">
+    <div className="w-full">
       <Router>
-        <div className="container">
+        <div className="">
         <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/login" element={<Login/>}/>
