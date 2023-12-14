@@ -2,8 +2,18 @@ import React from 'react'
 import DropdownButton from '../Assets/Buttons/DropdownButton';
 import Nivaran from '../Assets/Images/Nivaran.png';
 import LoginIcon from '@mui/icons-material/Login';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Header = () => {
+  const navigate=useNavigate();
+  const [isOpen,setIsOpen]=useState(false);
+
+  function login(){
+    navigate("/login");
+
+  }
+  
   return (
     <div className='max-w-screen flex flex-col justify-center'>
 
@@ -17,7 +27,7 @@ const Header = () => {
           <img className='h-full object-cover' src={Nivaran} alt="" />
         </div>
       </div>
-
+      
       <div className='flex flex-col sm:flex-row justify-between bg-slate-900 items-center'>
 
         <div className='flex flex-col sm:flex-row bg-slate-900 items-center sm:absolute w-full sm:w-auto'>
@@ -39,12 +49,13 @@ const Header = () => {
 
         <div className='flex flex-row justify-between text-white items-center px-2'>
           <button className='px-2 flex flex-row justify-between items-center text-white'>
-            <p className='px-1'> Login </p>
+            <p className='px-1'onClick={login}> Login </p>
             <LoginIcon className />
           </button>
         </div>
       </div>
-    </div>
+      </div>
+    
   )
 }
 
