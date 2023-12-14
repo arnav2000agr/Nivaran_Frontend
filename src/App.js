@@ -4,11 +4,8 @@ import Login from './Pages/Login';
 
 function App() {
   return (
-    <div className="h-screen w-screen flex flex-col">
-      <div className='sticky'>
-        <Header/>
-      </div>
-      <Login/>
+    <div className="m-0 p-0">
+        <Login/>
     </div>
   );
 }

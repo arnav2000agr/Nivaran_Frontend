@@ -5,17 +5,20 @@ import LoginIcon from '@mui/icons-material/Login';
 
 const Header = () => {
   return (
-    <div className='flex flex-col w-screen absolute'>
-      <div className='w-full px-4 flex flex-row justify-between items-center bg-gray-100'>
+    <div className='max-w-screen flex flex-col justify-center'>
+
+      <div className='flex flex-row justify-between items-center bg-gray-100'>
+
         <div className='p-2 text-white h-20'>
-          <img className='w-full h-full object-cover' src="https://pgportal.gov.in/Images/iconHome/logo.png" alt="" />
+          <img className='h-full object-cover' src="https://pgportal.gov.in/Images/iconHome/logo.png" alt="" />
         </div>
+
         <div className='p-2 h-20'>
-          <img className='w-full h-full object-cover' src={Nivaran} alt="" />
+          <img className='h-full object-cover' src={Nivaran} alt="" />
         </div>
       </div>
 
-      <div className='w-screen flex flex-col sm:flex-row justify-between bg-slate-900 items-center px-4 relative'>
+      <div className='flex flex-col sm:flex-row justify-between bg-slate-900 items-center'>
 
         <div className='flex flex-col sm:flex-row bg-slate-900 items-center sm:absolute w-full sm:w-auto'>
           <DropdownButton buttonConfig={{ color: 'bg-slate-900', buttonName: 'Grievances', options: ['New Grievance', 'View Status'] }} />
