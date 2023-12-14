@@ -12,6 +12,10 @@ function Homepage() {
         <div className=''>
           <Carousel/>
         </div>
+
+        <div>
+          
+        </div>
     </div>   
     </>
   )

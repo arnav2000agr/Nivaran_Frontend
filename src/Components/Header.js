@@ -11,7 +11,6 @@ const Header = () => {
 
   function login(){
     navigate("/login");
-
   }
   
   return (
@@ -30,7 +29,7 @@ const Header = () => {
       
       <div className='flex flex-col sm:flex-row justify-between bg-slate-900 items-center'>
 
-        <div className='flex flex-col sm:flex-row bg-slate-900 items-center sm:absolute w-full sm:w-auto'>
+        <div className='flex flex-col sm:flex-row bg-slate-900 items-center sm:absolute w-full sm:w-auto z-50'>
           <DropdownButton buttonConfig={{ color: 'bg-slate-900', buttonName: 'Grievances', options: ['New Grievance', 'View Status'] }} />
           <DropdownButton buttonConfig={{ color: 'bg-slate-900', buttonName: 'Redress Process', options: ['Set Reminder', 'Complaint'] }} />
           <DropdownButton buttonConfig={{ color: 'bg-slate-900', buttonName: 'Ministries', options: ['State Government', 'Central Government'] }} />
@@ -50,7 +49,7 @@ const Header = () => {
         <div className='flex flex-row justify-between text-white items-center px-2'>
           <button className='px-2 flex flex-row justify-between items-center text-white'>
             <p className='px-1'onClick={login}> Login </p>
-            <LoginIcon className />
+            <LoginIcon/>
           </button>
         </div>
       </div>
