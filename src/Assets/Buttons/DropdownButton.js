@@ -35,7 +35,7 @@ const DropdownButton = ({ buttonConfig }) => {
         {open && (
           <div className={`absolute mt-2 w-32 bg-${color} border rounded-md`}>
             {options.map((option, index) => (
-              <a key={index} href="#" className={`block px-4 py-2 text-sm text-${color} hover:bg-slate-300`} onClick={handleOptionClick}>
+              <a key={index} href="#" className={`block px-4 py-2 text-sm text-${color} bg-white hover:bg-slate-300`} onClick={handleOptionClick}>
                 {option}
               </a>
             ))}

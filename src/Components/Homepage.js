@@ -1,17 +1,18 @@
 import React from 'react'
 import Header from './Header'
-import Carousel1 from './Carousel1'
-import { useState } from 'react';
+import Carousel from './Carousel'
 
 function Homepage() {
-  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-    <div className='flex flex-col'>
-        <div><Header isOpen={isOpen} toggleMenu={() => setIsOpen(!isOpen)}/></div>
-        <div><Carousel1/></div>
-    </div>
-        
+    <div className='flex flex-col overflow-x-hidden'>
+        <div className='z-50'>
+          <Header/>
+        </div>
+        <div className=''>
+          <Carousel/>
+        </div>
+    </div>   
     </>
   )
 }
