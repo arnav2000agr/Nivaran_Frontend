@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField';
 import PersonIcon from '@mui/icons-material/Person';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { useNavigate } from 'react-router-dom';
+import Navbar from '../Components/NavbarComponent';
 
 
 const Login = () => {
@@ -24,7 +25,7 @@ const Login = () => {
     return (
         <div className='w-screen flex flex-col justify-between bg-red-600'>
 
-            <div className='sticky top-0 z-50'> <Header/> </div>
+            <div className='sticky top-0 z-50'> <Navbar/> </div>
 
             <div className=" bg-gray-100 text-gray-900 flex justify-center">
 

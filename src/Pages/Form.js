@@ -3,6 +3,7 @@ import Header from "../Components/Header";
 import "react-phone-number-input/style.css";
 import "tailwindcss/tailwind.css";
 import "./Form.css";
+import Navbar from "../Components/NavbarComponent";
 
 const MyForm = () => {
   const backgroundImageUrl =
@@ -351,7 +352,7 @@ const MyForm = () => {
       <div className="max-w-screen flex flex-col justify-between overflow-hidden">
         <div className="sticky top-0">
           {" "}
-          <Header />{" "}
+          <Navbar />{" "}
         </div>
 
         <div className="max-w-screen bg-gray-100 text-gray-900 flex justify-center">

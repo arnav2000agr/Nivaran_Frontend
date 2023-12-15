@@ -10,6 +10,7 @@ import PersonIcon from "@mui/icons-material/Person";
 import otp from "../Assets/Images/otp.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Navbar from "../Components/NavbarComponent";
 
 const Register = () => {
   const backgroundImageUrl =
@@ -65,7 +66,7 @@ const Register = () => {
     <div className="max-w-screen flex flex-col justify-between">
       <div className="sticky top-0">
         {" "}
-        <Header />{" "}
+        <Navbar/>{" "}
       </div>
 
       <div className=" bg-gray-100 text-gray-900 flex justify-center">

@@ -9,6 +9,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ToggleOnIcon from '@mui/icons-material/ToggleOn';
 import ToggleOffIcon from '@mui/icons-material/ToggleOff';
 import Header from '../Components/Header';
+import Navbar from '../Components/NavbarComponent';
 
 const Grievance = () => {
   const [text, setText] = useState('');
@@ -32,7 +33,7 @@ const Grievance = () => {
 
   return (
     <div className='flex flex-col'>
-        <div className='z-50'> <Header/> </div>
+        <div className='z-50'> <Navbar/> </div>
         <div className='h-screen flex flex-col font-sans text-black justify-center content-center bg-gray-100'>
 
         <div className='flex w-screen justify-center items-center content-center self-center p-10'>

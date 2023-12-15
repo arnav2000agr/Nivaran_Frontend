@@ -2,11 +2,11 @@ import React from 'react';
 import { BrowserRouter as Router, Routes,Route } from 'react-router-dom';
 import Homepage from './Components/Homepage';
 import Login from './Pages/Login';
-import Register from './Pages/Register';
 import MyForm from './Pages/Form';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Grievance from './Pages/Grievance';
+import Register from './Pages/Register';
 
 const App = () => {
   return (
@@ -18,8 +18,8 @@ const App = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/form" element={<MyForm/>}/>
-            <Route path="/state_ministry" element={<StateGovt/>}/>
-            <Route path="/central_ministry" element={<CentralGovt/>}/>
+            <Route path="/state_ministries" element={<StateGovt/>}/>
+            <Route path="/central_ministries" element={<CentralGovt/>}/>
             <Route path="/grievance" element={<Grievance/>}/>
         </Routes>
         </div>
