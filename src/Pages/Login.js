@@ -22,18 +22,18 @@ const Login = () => {
 
     }
     return (
-        <div className='max-w-screen flex flex-col justify-between'>
+        <div className='w-screen flex flex-col justify-between bg-red-600'>
 
-            <div className='sticky top-0'> <Header/> </div>
+            <div className='sticky top-0 z-50'> <Header/> </div>
 
             <div className=" bg-gray-100 text-gray-900 flex justify-center">
 
-                <div className=" m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+                <div className="m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
 
                     <div className="flex flex-col items-center lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
 
-                        <div className='w-1/3 flex items-center '>
-                            <img src={Nivaran_icon} className="" />
+                        <div className='w-1/3 flex items-center'>
+                            <img src={Nivaran_icon} className=""/>
                         </div>
 
                         <div className="mt-4 flex flex-col items-center">
