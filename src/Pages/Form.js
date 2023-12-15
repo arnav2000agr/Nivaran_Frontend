@@ -4,6 +4,7 @@ import "react-phone-number-input/style.css";
 import "tailwindcss/tailwind.css";
 import "./Form.css";
 import Navbar from "../Components/NavbarComponent";
+import axios from "axios";
 
 const MyForm = () => {
   const backgroundImageUrl =
@@ -322,7 +323,7 @@ const MyForm = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    aadharNumber: "",
+    aadharnumber: "",
     district: "",
     state: "",
     pincode: "",
@@ -330,7 +331,7 @@ const MyForm = () => {
     password: "",
     address:"",
     email:"",
-    number:localStorage.getItem("mobile")
+    mobilenumber:localStorage.getItem("mobile")
   });
 
   const handleChange = (e) => {
@@ -343,8 +344,20 @@ const MyForm = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(formData)
+    axios.post("http://localhost:8080/api/users/create",
+      formData
+    )
+    .then(function(response){
+      console.log(response)
+      alert("Data submitted");
+    })
+    .catch(function(error){
+      alert(error)
 
-    console.log("Form submitted:", formData);
+    })
+    
+    
   };
 
   return (
@@ -373,8 +386,8 @@ const MyForm = () => {
               <input
                 type="text"
                 placeholder="Enter Aadhar No."
-                name="aadharNumber"
-                value={formData.aadharNumber}
+                name="aadharnumber"
+                value={formData.aadharnumber}
                 onChange={handleChange}
                 
               />
@@ -394,8 +407,8 @@ const MyForm = () => {
               Phone Number:
               <input
                 type="text"
-                name="Number"
-                value={formData.number}
+                name="mobilenumber"
+                value={formData.mobilenumber}
               />
             </label>
             <label>
@@ -449,8 +462,8 @@ const MyForm = () => {
                 onChange={handleChange}
               >
                 <option value="">Select Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
               </select>
             </label>
 
