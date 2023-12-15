@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import Header from '../Components/Header';
+import NavbarComponent from '../Components/NavbarComponent'
+import InputAdornment from '@mui/material/InputAdornment';
+import TextField from '@mui/material/TextField';
+import KeyboardIcon from '@mui/icons-material/Keyboard';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 
 const Status = () => {
   const [selectedOption, setSelectedOption] = useState('applicationNumber');
@@ -10,8 +15,8 @@ const Status = () => {
 
   return (
     <div className='m-0 p-0'>
-        <Header/>
-        <div className='w-full flex flex-col justify-between items-center mt-28'> 
+        <NavbarComponent/>
+        <div className='w-full flex flex-col justify-between items-center mt-20'> 
 
             <h1 className='text-2xl font-serif font-bold'> Know Your Application Status </h1>
 
@@ -34,21 +39,22 @@ const Status = () => {
 
             <div className='w-1/2 justify-center items-center mt-6'>
                 {selectedOption === 'applicationNumber' && (
-                <div className=''>
-                    <input type="text" className='border-2 rounded-md' placeholder='Enter Application Number'/>
+                <div>
+                    <TextField className="w-full px-8 py-2 rounded-lg font-medium text-gray-800 bg-gray-100 border-2 border-gray-200 placeholder-gray-900 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="text" placeholder="Application Number" 
+                    InputProps={{ startAdornment: (<InputAdornment position="start"><KeyboardIcon /> </InputAdornment>),}}/>
                 </div>
                 )}
 
                 {selectedOption === 'getOTP' && (
                 <div>
-                    <input type="text" className='border-2 rounded-md' placeholder="Mobile Number" />
-                    
+                    <TextField className="w-full px-8 py-2 rounded-lg font-medium text-gray-800 bg-gray-100 border-2 border-gray-200 placeholder-gray-900 text-sm focus:outline-none focus:border-gray-400 focus:bg-white" type="text" placeholder="Registered Mobile Number" 
+                    InputProps={{ startAdornment: (<InputAdornment position="start"><PhoneAndroidIcon /> </InputAdornment>),}}/>
                 </div>
                 )}
             </div>
             
             <div className='mt-10'>
-                <button className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'> Get OTP </button>
+                {selectedOption === 'getOTP' ? <button className='bg-green-800 hover:bg-green-900 text-white font-bold py-2 px-4 rounded'> Get OTP </button> : <button className='bg-green-800 hover:bg-green-900 text-white font-bold py-2 px-4 rounded'> Continue </button>}
             </div>
 
         </div>
