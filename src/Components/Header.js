@@ -12,6 +12,9 @@ const Header = () => {
   function login(){
     navigate("/login");
   }
+  function home(){
+    navigate("/");
+  }
   
   return (
     <div className='w-screen flex flex-col justify-center'>
@@ -19,7 +22,7 @@ const Header = () => {
       <div className='flex flex-row justify-between items-center bg-gray-100'>
 
         <div className='p-2 text-white h-20'>
-          <img className='h-full object-cover' src="https://pgportal.gov.in/Images/iconHome/logo.png" alt="" />
+          <img onClick={home} className='h-full object-cover cursor-pointer' h src="https://pgportal.gov.in/Images/iconHome/logo.png" alt="" />
         </div>
 
         <div className='p-2 h-20'>
