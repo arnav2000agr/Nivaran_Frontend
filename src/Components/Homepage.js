@@ -12,7 +12,7 @@ function Homepage() {
   const toggleShow2 = () => setshow2(!show2);
   return (
     <>
-      <div className='w-full flex flex-col overflow-x-hidden'>
+      <div className='w-full flex flex-col overflow-x-hidden bg-gray-200'>
 
         <div className='z-50'>
           <Navbar/>
@@ -27,7 +27,7 @@ function Homepage() {
 
             <h1 className='text-lg font-bold'>What's New</h1>
              {/* first notification */}
-            <div className='flex flex-row border-t-4 rounded-md border-blue-700 p-2 shadow-md bg-gray-200 mt-3'>
+            <div className='flex flex-row rounded-md border-t-4 border-blue-700 p-2 shadow-md bg-gray-200 mt-3'>
               <div className='flex justify-center items-center p-1'>
                 <NotificationsIcon style={{ color:'brown' }}/>
               </div>

@@ -7,6 +7,7 @@ import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
+import Status from './Pages/Status';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/state_ministries" element={<StateGovt/>}/>
             <Route path="/central_ministries" element={<CentralGovt/>}/>
             <Route path="/grievance" element={<Grievance/>}/>
+            <Route path="/status" element={<Status/>}/>
         </Routes>
         </div>
       </Router>

@@ -29,6 +29,9 @@ const Navbar = () => {
   function central(){
     navigate("/central_ministries");
   }
+  function status(){
+    navigate("/status");
+  }
   return (
     <>
       <div className="p-2 flex flex-row justify-between bg-gray-100">
@@ -66,7 +69,7 @@ const Navbar = () => {
                   <button onClick={grievance}>New Grievance</button>
                 </li>
                 <li>
-                  <button>View Status</button>
+                  <button onClick={status}>View Status</button>
                 </li>
               </ol>
             </div>
