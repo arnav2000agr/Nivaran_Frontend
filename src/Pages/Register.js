@@ -27,7 +27,7 @@ const Register = () => {
   };
 
   function sendotp() {
-    console.log(mobile);
+    localStorage.setItem("mobile",mobile)
     axios
       .post("http://localhost:8080/api/users/sendotp", {
         mobilenumber: mobile,
@@ -51,6 +51,7 @@ const Register = () => {
       .then(function (response) {
         console.log(response);
         alert("Verified");
+        navigate("/form")
       })
       .catch(function (error) {
         console.log(error);
@@ -58,9 +59,7 @@ const Register = () => {
       });
   }
 
-  function form() {
-    navigate("/form");
-  }
+  
 
   return (
     <div className="max-w-screen flex flex-col justify-between">
@@ -126,9 +125,7 @@ const Register = () => {
                         Verify OTP
                       </button>
                     </div>
-                    <button className="w-72 h-7 opacity-70 text-center text-teal-800 text-2xl font-normal font-['Lato']">
-                      Fill Application form
-                    </button>
+                    
                   </div>
                   <button className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
                     <svg

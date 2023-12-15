@@ -316,7 +316,7 @@ const MyForm = () => {
       "Vellore",
       "Viluppuram",
       "Virudhunagar",
-    ], // Add more states and their districts as needed
+    ], 
   };
 
   const [formData, setFormData] = useState({
@@ -327,6 +327,9 @@ const MyForm = () => {
     pincode: "",
     gender: "",
     password: "",
+    address:"",
+    email:"",
+    number:localStorage.getItem("mobile")
   });
 
   const handleChange = (e) => {
@@ -345,7 +348,7 @@ const MyForm = () => {
 
   return (
     <>
-      <div className="max-w-screen flex flex-col justify-between">
+      <div className="max-w-screen flex flex-col justify-between overflow-hidden">
         <div className="sticky top-0">
           {" "}
           <Header />{" "}
@@ -371,6 +374,36 @@ const MyForm = () => {
                 placeholder="Enter Aadhar No."
                 name="aadharNumber"
                 value={formData.aadharNumber}
+                onChange={handleChange}
+                
+              />
+            </label>
+            <label>
+              Email:
+              <input
+                type="text"
+                placeholder="Enter Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </label>
+
+            <label>
+              Phone Number:
+              <input
+                type="text"
+                name="Number"
+                value={formData.number}
+              />
+            </label>
+            <label>
+              Address:
+              <input
+                type="text"
+                placeholder="Enter Address"
+                name="address"
+                value={formData.address}
                 onChange={handleChange}
               />
             </label>

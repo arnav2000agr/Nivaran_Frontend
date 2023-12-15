@@ -15,6 +15,9 @@ const Header = () => {
   function home(){
     navigate("/");
   }
+  function state(){
+    navigate("/state_ministry");
+  }
   
   return (
     <div className='w-screen flex flex-col justify-center'>
@@ -40,7 +43,7 @@ const Header = () => {
         </div>
 
         <div className='flex flex-col sm:flex-row bg-slate-900 items-center sm:ml-auto'>
-          <div className="flex items-center px-2 mb-2 sm:mb-0">
+          <div className="flex items-center py-2 first-letter:px-2 mb-2 sm:mb-0">
             <div className="flex items-center">
               <input type="text" className="px-2 text-purple-700 bg-white border rounded-md focus:border-purple-400" placeholder="Search..." />
               <button className="flex items-center justify-center px-2 text-white bg-slate-900"> Search </button>
