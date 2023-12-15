@@ -58,7 +58,7 @@ function Homepage() {
                   <div className='text-md'> 
                     Lorem ipsum dolor sit amet rem ipsum dolor sit amet consectetur adipisicing elit. Prae Lorem ipsum dolor sit ametatem, omnis et minus dolorum in
                   </div>
-                    {show1 && <div className='p-2 bg-white text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
+                    {show1 && <div className='p-2 bg-gray-100 text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
                   </div>
                 <div className='flex justify-center items-center p-1 right-0 top-2'>
                   <button onClick={toggleShow1}> <ArrowDropDownIcon style={{ fontSize: '2rem' }}/> </button>
@@ -70,7 +70,7 @@ function Homepage() {
                   <div className='text-md'> 
                     Lorem ipsum dolor sit amet rem ipsum dolor sit amet consectetur adipisicing elit. Prae Lorem ipsum dolor sit ametatem, omnis et minus dolorum in
                   </div>
-                    {show2 && <div className='p-2 bg-white text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
+                    {show2 && <div className='p-2 bg-gray-100 text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
                   </div>
                 <div className='flex justify-center items-center p-1 right-0 top-2'>
                   <button onClick={toggleShow2}> <ArrowDropDownIcon style={{ fontSize: '2rem' }}/> </button>
