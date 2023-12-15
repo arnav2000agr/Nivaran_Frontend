@@ -1,0 +1,146 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #186763;
+    color: white;
+    padding: 10px;
+    
+  }
+  .but{
+    display: flex;
+    justify-self: flex-end;
+  }
+  
+  
+  .navbar-brand {
+    font-size: 1.5em;
+  }
+  
+  .navbar-menu {
+    color:white;
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar-item {
+    margin-right: 10px;
+    
+    position: relative;
+    font-size:large;
+  }
+  
+  .navbar-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+    font-size: small;
+    color:black
+    /* align-items:baseline; */
+
+  }
+  
+  .navbar-item:hover .navbar-dropdown {
+    display: block;
+  }
+  
+  .navbar-search input {
+    padding: 5px;
+    
+    border: 1px solid #ccc;
+  }
+  
+  .navbar-lang select {
+    padding: 5px;
+  }
+  
+  .navbar-login button {
+    padding: 5px 10px;
+    background-color: white;
+    color: teal;
+    border: 1px solid teal;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  /* ... Your existing styles ... */
+
+@media (max-width: 768px) {
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      align-items: flex-start;
+      
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: #186763;
+      color: white;
+    }
+  
+    .navbar-menu.open {
+      display: flex;
+    }
+  
+    .navbar-item {
+      margin-right: 0;
+    }
+  
+    .navbar-dropdown {
+      display: none;
+      flex-direction: column;
+      position: static;
+      background-color: #186763;
+    }
+  
+    .navbar-item:hover .navbar-dropdown {
+      display: flex;
+    }
+  
+    .navbar-hamburger {
+      display: flex;
+      cursor: pointer;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 20px;
+    }
+  
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+    }
+  
+    .navbar-menu.open .bar:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .navbar-menu.open .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .navbar-menu.open .bar:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  
+    .navbar-search,
+    .navbar-lang,
+    .navbar-login {
+      display: none;
+    }
+  
+    .navbar.open .navbar-search,
+    .navbar.open .navbar-lang,
+    .navbar.open .navbar-login {
+      display: flex;
+    }
+  }
+  

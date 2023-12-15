@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Components/Header";
+import Navbar from "../Components/NavbarComponent";
 
 const CentralGovt=()=>{
 
@@ -84,7 +85,7 @@ const CentralGovt=()=>{
         <div className="max-w-screen flex flex-col justify-between overflow-hidden">
         <div className="sticky top-0">
           {" "}
-          <Header />{" "}
+          <Navbar />{" "}
         </div>
         <div>
         <table style={{ width: '100%', backgroundColor: '#e6f7ff' }}>

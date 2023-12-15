@@ -3,6 +3,7 @@ import Header from './Header'
 import Carousel from './Carousel'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import Navbar from './NavbarComponent';
 
 function Homepage() {
   const [show1, setShow1] = useState(false);
@@ -14,7 +15,7 @@ function Homepage() {
       <div className='w-full flex flex-col overflow-x-hidden'>
 
         <div className='z-50'>
-          <Header/>
+          <Navbar/>
         </div>
 
         <div className=''>
