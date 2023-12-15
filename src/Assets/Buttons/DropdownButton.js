@@ -47,7 +47,6 @@ const DropdownButton = ({ buttonConfig }) => {
             ))}
           </div>
         )}
-        
       </div>
     </div>
   );
