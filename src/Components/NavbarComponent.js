@@ -136,9 +136,9 @@ const Navbar = () => {
           <div className="navbar-login px-10">
             <button onClick={login}>Login</button>
           </div>
-          <div className="navbar-login">
+          {/* <div className="navbar-login">
             <button onClick={register}>Signup</button>
-          </div>
+          </div> */}
         </div>
       </nav>
     </>
