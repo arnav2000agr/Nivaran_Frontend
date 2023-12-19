@@ -84,12 +84,7 @@ const Navbar = () => {
             src="https://pgportal.gov.in/Images/iconHome/logo.png"
             alt=""
           />
-          <img
-            className="h-full object-cover cursor-pointer"
-            onClick={home}
-            src="https://pgportal.gov.in/Images/iconHome/logo.png"
-            alt=""
-          />
+          
         </div>
 
         <div className="p-2 h-20">
@@ -102,9 +97,7 @@ const Navbar = () => {
           <h1 className={`nivaran ${isFading ? "fade" : ""}`} onClick={home}>
             {languages[currentLanguageIndex]}
           </h1>
-          <h1 className={`nivaran ${isFading ? "fade" : ""}`} onClick={home}>
-            {languages[currentLanguageIndex]}
-          </h1>
+         
         </div>
         <div className={`navbar-hamburger`} onClick={toggleMenu}>
           {isMenuOpen ? (
@@ -160,12 +153,7 @@ const Navbar = () => {
                   >
                     View Status
                   </button>
-                  <button
-                    onClick={status}
-                    className="font-semibold text-md text-gray-600 py-1"
-                  >
-                    View Status
-                  </button>
+                  
                 </li>
               </ol>
             </div>
