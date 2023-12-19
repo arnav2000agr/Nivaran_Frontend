@@ -7,8 +7,6 @@ import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
 import SpeechArena from './Pages/SpeechArena';
-import StateGovt from './Pages/StateGovt';
-import CentralGovt from './Pages/CentralGovt';
 import Reminder from './Pages/Reminder';
 import OfficialTemplate from './Pages/OfficialTemplate';
 import StatusTracker from './Pages/StatusTracker';
