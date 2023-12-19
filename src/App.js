@@ -8,7 +8,11 @@ import CentralGovt from './Pages/CentralGovt';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
+
 import StatusDetails from './Pages/StatusDetails';
+
+import StateGovt from './Pages/StateGovt';
+import CentralGovt from './Pages/CentralGovt';
 
 const App = () => {
   return (
@@ -20,6 +24,8 @@ const App = () => {
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path="/form" element={<MyForm/>}/>
+            <Route path="/state_ministry" element={<StateGovt/>}/>
+            <Route path="/central_ministry" element={<CentralGovt/>}/>
             <Route path="/state_ministries" element={<StateGovt/>}/>
             <Route path="/central_ministries" element={<CentralGovt/>}/>
             <Route path="/grievance" element={<Grievance/>}/>
