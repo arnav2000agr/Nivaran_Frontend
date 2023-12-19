@@ -2,12 +2,15 @@ import React, { useState } from "react";
 import Nivaran_icon from "../Assets/Images/Nivaran_icon.png";
 import "react-phone-number-input/style.css";
 import "tailwindcss/tailwind.css";
+import Header from "../Components/Header";
+import { useRef } from "react";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
 import PersonIcon from "@mui/icons-material/Person";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/NavbarComponent";
+import Snackbar from "../Components/Snackbar";
 import AodIcon from '@mui/icons-material/Aod';
 
 const Register = () => {
@@ -15,6 +18,10 @@ const Register = () => {
   const navigate = useNavigate();
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState("");
+  const snackbarRef = useRef(null);
+  const [message, setMessage] = useState("");
+  const [show, setShow] = useState(true);
+  const [type,setType] = useState("");
 
   const handleMobileNumberChange = (e) => {
     setMobile(e.target.value);
@@ -31,11 +38,21 @@ const Register = () => {
         mobilenumber: mobile,
       })
       .then(function (response) {
-        console.log(response);
-        alert("OTP sent Successfully");
+        console.log(response)
+        
+        setMessage("OTP sent successfully");
+        setType("success");
+        snackbarRef.current.show();
+        setShow(true);
+        
       })
       .catch(function (error) {
-        alert("Failed");
+        setMessage("Error via server side");
+        setType("fail");
+        snackbarRef.current.show();
+        setShow(true);
+
+        
       });
   }
 
@@ -48,12 +65,22 @@ const Register = () => {
       })
       .then(function (response) {
         console.log(response);
-        alert("Verified");
-        navigate("/form")
+        localStorage.setItem("Auth",true);
+        setMessage("OTP verified successfully!");
+        setType("success");
+        snackbarRef.current.show();
+        setShow(true);
+        setTimeout(() => {
+          navigate("/form")
+          
+        }, 4000);
+        
       })
       .catch(function (error) {
-        console.log(error);
-        alert("Not verified");
+        setMessage("OTP unverified!");
+        setType("fail");
+        snackbarRef.current.show();
+        setShow(true);
       });
   }
 
@@ -65,10 +92,13 @@ const Register = () => {
         {" "}
         <Navbar/>{" "}
       </div>
+      
 
       <div className=" bg-gray-100 text-gray-900 flex justify-center">
         <div className=" m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
           <div className="flex flex-col items-center lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
+          <Snackbar ref={snackbarRef} message={message} type={type} />
+
             <div className="w-1/3 flex items-center ">
               <img src={Nivaran_icon} className="" />
             </div>

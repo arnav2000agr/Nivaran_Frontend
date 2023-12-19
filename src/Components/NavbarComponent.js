@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import icon from "../Assets/Images/NivaranLogoLight.png";
 import Nivaran from "../Assets/Images/NivaranIcon.png";
 import { useNavigate } from "react-router-dom";
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const Navbar = () => {
   const languages = ['निवारण', 'Nivaran', 'নিবারণ', 'નિવારણ', 'നിവാരൻ', 'நிவாரன்',  'ನಿವಾರಣ್', 'నివారణ'];
@@ -47,6 +47,11 @@ const Navbar = () => {
   function status(){
     navigate("/status");
   }
+  function logout(){
+    localStorage.setItem("Auth",false)
+    localStorage.removeItem("Auth");
+    navigate("/");
+  }
 
 
   return (
@@ -65,15 +70,21 @@ const Navbar = () => {
 
       <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
         <div className="w-8 pl-3">
-          <h1 className={`nivaran ${isFading ? 'fade' : ''}`}>{languages[currentLanguageIndex]}</h1>
+          <h1 className={`nivaran ${isFading ? 'fade' : ''}`} onClick={home}>{languages[currentLanguageIndex]}</h1>
         </div>
         <div className={`navbar-hamburger`} onClick={toggleMenu}>
-          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
-          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
-          <div className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+          {isMenuOpen ? (
+            <div className={`navbar-menu ${isMenuOpen ? "closed" :" "}`}></div>
+          ) : (
+            <>
+              <div onClick={toggleMenu} className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+              <div onClick={toggleMenu} className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+              <div onClick={toggleMenu} className={`bar ${isMenuOpen ? "open" : ""}`}></div>
+            </>
+          )}
         </div>
 
-        <ul className={`navbar-menu ${isMenuOpen ? "open" : ""}`}>
+        <ul className={`navbar-menu ${isMenuOpen ? "open" : "closed"}`}>
 
           <li className="navbar-item">
             <a className="px-8">Grievances</a>
@@ -132,14 +143,21 @@ const Navbar = () => {
           </li>
 
         </ul>
-        <div className="but">
+        {!(localStorage.getItem("Auth")) ? 
+        (<div className="but">
           <div className="navbar-login px-10">
             <button onClick={login}>Login</button>
           </div>
-          {/* <div className="navbar-login">
-            <button onClick={register}>Signup</button>
-          </div> */}
-        </div>
+        </div>)
+        :
+        (
+          <div className="but">
+          <div className="navbar-login px-10">
+          <button onClick={logout}><AccountCircleIcon/>Tanya</button>  
+          </div>         
+          </div>
+
+        )}
       </nav>
     </>
   );

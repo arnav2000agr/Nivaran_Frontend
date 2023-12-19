@@ -57,7 +57,7 @@ function Homepage() {
               <div className='flex flex-row border-1 rounded-md border-slate-400 shadow-md bg-gray-200 m-2 p-2 overflow-hidden w-4/5' style={{ boxShadow: '0px 10px 10px rgba(0, 0, 0, 0.1)' }}>
                 <div className='flex flex-col'>
                   <div className='text-md'> 
-                    Lorem ipsum dolor sit amet rem ipsum dolor sit amet consectetur adipisicing elit. Prae Lorem ipsum dolor sit ametatem, omnis et minus dolorum in
+                  What if I'm not satisfied with the resolution of my grievance?
                   </div>
                     {show1 && <div className='p-2 bg-gray-100 text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
                   </div>
@@ -69,8 +69,7 @@ function Homepage() {
               <div className='flex flex-row border-1 rounded-md border-slate-400 shadow-md bg-gray-200 m-2 p-2 overflow-hidden w-4/5' style={{ boxShadow: '0px 10px 10px rgba(0, 0, 0, 0.1)' }}>
                 <div className='flex flex-col'>
                   <div className='text-md'> 
-                    Lorem ipsum dolor sit amet rem ipsum dolor sit amet consectetur adipisicing elit. Prae Lorem ipsum dolor sit ametatem, omnis et minus dolorum in
-                  </div>
+                  What happens after my grievance is sent to the relevant ministry?                  </div>
                     {show2 && <div className='p-2 bg-gray-100 text-black border-t-2'> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel, natus quo placeat delectus corporis perspiciatis. this is drop down content</div>}
                   </div>
                 <div className='flex justify-center items-center p-1 right-0 top-2'>

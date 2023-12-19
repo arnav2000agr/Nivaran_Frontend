@@ -1,0 +1,66 @@
+.snackbar {
+    position: fixed;
+    left: 50%;
+  /* right:4%; */
+    top:165px;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    border-radius: 2px;
+    text-align: center; 
+    z-index: 1;
+    color:#000;
+   
+    
+  }
+  
+  
+  
+  .snackbar .symbol {
+    flex: 20%;
+  }
+  .snackbar .message {
+    flex: 80%;
+    text-align: start;
+  }
+  #show {
+    visibility: visible;
+  }
+  #hide {
+    display: none;
+    visibility: hidden;
+  }
+  
+  .container{
+    overflow: hidden;
+  }
+  
+  @media only screen and (min-width: 550px) and (max-width: 699px) {
+     .snackbar{
+      bottom:40px;
+     }
+  }
+  @media only screen and (min-width: 486px) and (max-width: 549px) {
+     .snackbar{
+      bottom:10px;
+     }
+  }
+  @media screen and (min-width:190px) and (max-width:500px) {
+    .snackbar{
+      width: 250px;
+      margin-right:-19px;
+      margin-top: 5px;
+      text-align: center;
+    }
+  
+    .container{
+          overflow-y: hidden;
+          overflow-x: hidden;
+    }
+  }
+  
+  
