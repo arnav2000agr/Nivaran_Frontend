@@ -81,7 +81,7 @@ const data = [
   { name: 'Residential', value: 25 },
   { name: 'Heating', value: 12 },
   { name: 'Lighting', value: 11 },
-  { name: 'Other', value: 15 },
+  { name: 'Other', value: 15 }, 
 ];
  
 
@@ -101,20 +101,49 @@ const Ministry = () => {
   return (
     <div className="m-0 p-0">
       <div> <Navbar /> </div>
-      <div className="h-full flex flex-col items-center bg-gray-200 pt-8">
-        <h1 className="text-lg font-serif font-bold">{ministry.ministryName}</h1>
+      <div className="h-screen bg-gray-100 flex flex-col items-center pt-8">
+        <h1 className="text-lg font-serif font-bold text-gray-800 mb-4">{ministry.ministryName}</h1>
+        <div className='w-full flex flex-col md:flex-row'>
+          <div className='w-full md:w-2/3 flex flex-col justify-center items-center text-lg text-gray-800'>
+            <div className="mb-4 md:w-1/3">
+              <p>Unique Identification No: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Officer Name: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Contact official: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>No of Grievances: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Solved Grievances: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Response Time(AVG): </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Concerned Areas: </p>
+            </div>
+            <div className="mb-4 md:w-1/3">
+              <p>Feedback Rating: ⭐⭐</p>
+            </div>
+          </div>
 
-        <ResponsiveContainer width="100%" height={400}>
-          <PieChart>
-            <Pie dataKey="value" isAnimationActive={true} data={data} cx="50%" cy="50%" outerRadius={80} fill="#8884d8" label>
-              {data.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={`#${index + 6}6a8dd`} />
-              ))}
-            </Pie>
-          </PieChart>
-      </ResponsiveContainer>
-      
-      </div>
+          <div className="w-full md:w-1/3 flex justify-center items-center">
+            <ResponsiveContainer display="flex" width="100%" height={400}>
+              <PieChart>
+                <Pie dataKey="value" isAnimationActive={true} data={data} cx="50%" cy="50%" outerRadius={110} fill="#f25b68" label>
+                  {data.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={`#${index + 6}8c50c`} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+        </div>
     </div>
   );
 };

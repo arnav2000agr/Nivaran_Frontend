@@ -73,6 +73,9 @@ const Navbar = () => {
   function reminder(){
     navigate("/reminder");
   }
+  function dashboard(){
+    navigate("/dashboard")
+  }
 
   return (
     <>
@@ -245,7 +248,7 @@ const Navbar = () => {
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={dashboard} className="font-semibold text-md text-gray-600 py-1">
                     Profile
                   </button>
                 </li>

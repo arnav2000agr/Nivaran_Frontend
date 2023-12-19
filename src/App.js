@@ -14,6 +14,7 @@ import Thankyou from './Pages/Thankyou';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Ministry from './Pages/Ministry';
+import Dashboard from './Pages/Dashboard';
 
 
 const App = () => {
@@ -41,6 +42,7 @@ const App = () => {
             <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
             <Route path="/thankyou" element={<Thankyou/>}/>
             <Route path="/ministry/:id" element={<Ministry/>}/>
+            <Route path='/dashboard' element={<Dashboard/>}/>
         </Routes>
         </div>
       </Router>
