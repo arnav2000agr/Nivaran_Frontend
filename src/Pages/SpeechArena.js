@@ -31,7 +31,7 @@ const SpeechArena= () => {
   return (
     <>
       <Navbar/> 
-      <div className='h-screen flex flex-col justify-center bg-gray-200 '>
+      <div className='h-screen flex flex-col justify-center bg-gray-100 '>
         <div className='w-full flex justify-center'>
           <p onClick={() => setText(transcript)} className='p-5 h-auto w-1/2 m-0 mb-10 text-green-800 text-md font-semibold border-2 border-double rounded-lg  border-gray-400 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500'>
             {transcript}

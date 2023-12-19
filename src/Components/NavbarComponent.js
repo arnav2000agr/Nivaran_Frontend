@@ -8,7 +8,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 const Navbar = () => {
   const languages = [
     "निवारण",
-    "Nivaran",
+    "NIVARAN",
     "নিবারণ",
     "નિવારણ",
     "നിവാരൻ",
