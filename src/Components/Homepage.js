@@ -11,7 +11,7 @@ function Homepage() {
   const toggleShow2 = () => setshow2(!show2);
   return (
     <>
-      <div className='w-full flex flex-col overflow-x-hidden bg-gray-200'>
+      <div className='w-full flex flex-col overflow-x-hidden bg-gray-100'>
 
         <div className='z-50'>
           <Navbar/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import Nivaran from '../Assets/Images/Nivaran.png'
-import  Nivaran_icon from '../Assets/Images/Nivaran_icon.png'
+// import Nivaran from '../Assets/Images/NivaranIcon.png'
+import  Nivaran_icon from '../Assets/Images/NivaranIcon.png'
 import 'react-phone-number-input/style.css'
 import 'tailwindcss/tailwind.css';
 import Header from '../Components/Header';
@@ -15,6 +15,7 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import axios from 'axios';
 import Snackbar from '../Components/Snackbar';
 import { useRef } from 'react';
+import loginlogo from '../Assets/Images/login_logo.png'
 
 const Login = () => {
     const backgroundImageUrl = 'https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz';
@@ -67,14 +68,14 @@ const Login = () => {
 
     }
     return (
-        <div className='w-screen flex flex-col justify-between bg-red-600'>
+        <div className='w-screen flex flex-col justify-between'>
 
             <div className='sticky top-0 z-50'> <Navbar/> </div>
 
             <div className=" bg-gray-100 text-gray-900 flex justify-center">
             <Snackbar ref={snackbarRef} message={message} type={type} />
 
-                <div className="m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+                <div className="m-0 sm:m-10 bg-gray-200 shadow sm:rounded-lg flex justify-center flex-1">
 
                     <div className="flex flex-col items-center lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
 
@@ -116,9 +117,9 @@ const Login = () => {
 
                     </div>
 
-                    <div className="flex-1 bg-green-100 text-center hidden lg:flex">
+                    <div className="flex-1 bg-teal-800 text-center hidden lg:flex rounded-r-lg">
                         <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-                            style={{ backgroundImage: `url('${backgroundImageUrl}')` }}>
+                            style={{ backgroundImage: `url('${loginlogo}')`}}>
                         </div>
                     </div>
 
