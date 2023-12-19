@@ -14,6 +14,7 @@ import SpeechArena from './Pages/SpeechArena';
 
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
+import Status from './Pages/Status';
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
             <Route path="/status" element={<Status/>}/>
             <Route path="/statusdetails" element={<StatusDetails/>}/>
             <Route path="/speecharena" element={<SpeechArena/>}/>
+            <Route path="/status" element={<Status/>}/>
         </Routes>
         </div>
       </Router>
