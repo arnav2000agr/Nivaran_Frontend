@@ -14,6 +14,8 @@ import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import axios from 'axios';
 import Snackbar from '../Components/Snackbar';
+import { useRef } from 'react';import axios from 'axios';
+import Snackbar from '../Components/Snackbar';
 import { useRef } from 'react';
 import loginlogo from '../Assets/Images/login_logo.png'
 
@@ -43,8 +45,6 @@ const Login = () => {
         localStorage.setItem("Auth",true);
        
         localStorage.setItem("User",response.data.ispresent._id)
-        // console.log(response.data.token)
-        localStorage.setItem("bearer",response.data.token)
        
         setTimeout(() => {
             navigate("/")

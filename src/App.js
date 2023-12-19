@@ -6,6 +6,7 @@ import MyForm from './Pages/Form';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
+import SpeechArena from './Pages/SpeechArena';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Reminder from './Pages/Reminder';
