@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Header from './Header'
 import Carousel from './Carousel'
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';

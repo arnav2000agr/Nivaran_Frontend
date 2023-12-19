@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import carousel_Image1 from '../Assets/Images/carousel_img1carousel_1.png';
-import carousel_Image2 from '../Assets/Images/Digital-India.jpg';
-import carousel_Image3 from '../Assets/Images/key_sih.png';
+import carousel_Image1 from '../Assets/Images/Frame4.png';
+import carousel_Image6 from '../Assets/Images/Frame2.png';
+import carousel_Image7 from '../Assets/Images/Frame3.png';
 
 const Carousel = () => {
-  const images = [ carousel_Image1, carousel_Image2, carousel_Image3];
+  const images = [ 
+    carousel_Image1,
+    carousel_Image6,
+    carousel_Image7,
+];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -23,18 +27,30 @@ const Carousel = () => {
       <div className="pt-12 flex flex-row justify-center w-5/6 md:w-5/6 relative">
 
         <div className='absolute left-0 top-1/2 transform -translate-y-1/2 z-50'>
-          <ChevronLeftIcon style={{ fontSize: '3rem', color: 'white' }}/>
+          <ChevronLeftIcon style={{ fontSize: '3rem', color: 'white' }} />
         </div>
 
+
+
+
+
         <div className="w-full overflow-hidden" style={{ height: '40vh' }}>
-          <div className="flex h-full transition-transform ease-in-out duration-500" style={{ transform: `translateX(${-currentImage * 100}%)` }}>
-            {images.map((img, i) => (
-            <div key={img} className="w-full flex-shrink-0">
-              <img src={img} className="w-full h-full object-cover" alt={`carousel-img-${i}`} style={{ objectFit: 'cover' }}/>
-            </div>
-            ))}
-          </div>
-        </div>
+  <div className="flex transition-transform ease-in-out duration-500" style={{ transform: `translateX(${-currentImage * 100}%)` }}>
+    {images.map((img, i) => (
+      <div key={img} className="w-full flex-shrink-0">
+        <img
+          src={img}
+          className="w-full h-full object-none object-top"
+          alt={`carousel-img-${i}`}
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
 
         <div className='absolute right-0 top-1/2 transform -translate-y-1/2'>
           <ChevronRightIcon style={{ fontSize: '3rem', color: 'white' }} />

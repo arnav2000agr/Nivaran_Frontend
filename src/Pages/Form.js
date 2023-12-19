@@ -318,11 +318,7 @@ const MyForm = () => {
       "Vellore",
       "Viluppuram",
       "Virudhunagar",
-<<<<<<< Updated upstream
-    ], 
-=======
     ],  
->>>>>>> Stashed changes
   };
 
   const [formData, setFormData] = useState({

@@ -3,6 +3,7 @@ import "./Navbar.css";
 import Nivaran from "../Assets/Images/NivaranIcon.png";
 import { useNavigate } from "react-router-dom";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Navbar = () => {
   const languages = ['निवारण', 'Nivaran', 'নিবারণ', 'નિવારણ', 'നിവാരൻ', 'நிவாரன்',  'ನಿವಾರಣ್', 'నివారణ'];
@@ -18,7 +19,7 @@ const Navbar = () => {
         setCurrentLanguageIndex((prevIndex) => (prevIndex + 1) % languages.length);
         setFading(false);
       }, 1000);
-    }, 3000);
+    }, 2500);
     return () => clearInterval(intervalId);
   }, []); 
 
@@ -51,6 +52,9 @@ const Navbar = () => {
     localStorage.setItem("Auth",false)
     localStorage.removeItem("Auth");
     navigate("/");
+  }
+  function reminder(){
+    navigate("/reminder");
   }
 
 
@@ -87,11 +91,16 @@ const Navbar = () => {
         <ul className={`navbar-menu ${isMenuOpen ? "open" : "closed"}`}>
 
           <li className="navbar-item">
-            <a className="px-8">Grievances</a>
+            <a className="px-8 flex items-center"> 
+              <ExpandMoreIcon/>
+              Grievances
+            </a>
             <div className="navbar-dropdown">
               <ol>
                 <li>
-                  <button onClick={grievance} className="font-semibold text-md text-gray-600 py-1">New Grievance</button>
+                  <button onClick={grievance} className="font-semibold text-md text-gray-600 py-1">
+                    New Grievance
+                  </button>
                 </li>
                 <li>
                   <button onClick={status} className="font-semibold text-md text-gray-600 py-1">View Status</button>
@@ -101,11 +110,14 @@ const Navbar = () => {
           </li>
 
           <li className="navbar-item">
-            <a className="px-8">Redress</a>
+            <a className="px-8 flex items-center">
+              <ExpandMoreIcon/>
+              Redress
+            </a>
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">Send Reminder</button>
+                  <button onClick={reminder} className="font-semibold text-md text-gray-600 py-1">Send Reminder</button>
                 </li>
                 <li>
                   <button className="font-semibold text-md text-gray-600 py-1">File Complaint</button>
@@ -115,7 +127,10 @@ const Navbar = () => {
           </li>
 
           <li className="navbar-item">
-            <a className="px-8">Ministries</a>
+            <a className="px-8 flex items-center">
+              <ExpandMoreIcon/>
+              Ministries
+            </a>
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
@@ -129,7 +144,10 @@ const Navbar = () => {
           </li>
 
           <li className="navbar-item">
-            <a className="px-8">Contact</a>
+            <a className="px-8 flex items-center">
+              <ExpandMoreIcon/>
+              Contact
+            </a>
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
