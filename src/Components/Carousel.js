@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import carousel_Image1 from '../Assets/Images/carousel_img1carousel_1.png';
-import carousel_Image2 from '../Assets/Images/Digital-India.jpg';
-import carousel_Image3 from '../Assets/Images/key_sih.png';
 import frame1 from '../Assets/Images/Frame2.png'
 import frame2 from '../Assets/Images/Frame3.png'
 import frame3 from '../Assets/Images/Frame4.png'
 
 const Carousel = () => {
   const images = [ frame1, frame2, frame3, ];
-
   const [currentImage, setCurrentImage] = useState(0);
 
   useEffect(() => {

@@ -2,14 +2,20 @@ import React, {useState} from 'react'
 import Navbar from '../Components/NavbarComponent'
 import officialtemplate_image from '../Assets/Images/officialtemplate_image.png';
 import WaterfallChartIcon from '@mui/icons-material/WaterfallChart';
-import GavelIcon from '@mui/icons-material/GavelRounded';
+import GavelIcon from '@mui/icons-material/Gavel';
+import { useNavigate } from 'react-router-dom';
 
 const OfficialTemplate = () => {
     const [official, setOfficial]= useState(true);
     const handleOfficial = () =>{
         setOfficial(!official);
     }
+    const navigate=useNavigate()
 
+
+    const home=()=>{
+        navigate("/")
+    }
   return (
     <div className='h-screen'>
         <div className=''>
@@ -86,7 +92,8 @@ const OfficialTemplate = () => {
             </div>}
             
 
-            <button>Language Select</button>
+            {/* <button>Language Select</button> */}
+            <button onClick={home} className='flex justify-center items-center w-20 h-10 p-3 bg-blue-800 hover:bg-blue-900 rounded-lg  text-white'>Submit</button>
 
         </div>
       </div>

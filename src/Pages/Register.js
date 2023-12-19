@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/NavbarComponent";
 import Snackbar from "../Components/Snackbar";
 import AodIcon from '@mui/icons-material/Aod';
+import loginlogo from '../Assets/Images/login_logo.png'
 
 const Register = () => {
   const backgroundImageUrl = "https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz";
@@ -96,8 +97,8 @@ const Register = () => {
       </div>
       
 
-      <div className=" bg-gray-100 text-gray-900 flex justify-center">
-        <div className=" m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
+      <div className="  text-gray-900 flex justify-center">
+        <div className=" m-0 sm:m-10 bg-white sm:rounded-lg flex justify-center flex-1">
           <div className="flex flex-col items-center lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
           <Snackbar ref={snackbarRef} message={message} type={type} />
 
@@ -161,12 +162,11 @@ const Register = () => {
             </div>
           </div>
 
-          <div className="flex-1 bg-green-100 text-center hidden lg:flex">
-            <div
-              className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
-              style={{ backgroundImage: `url('${backgroundImageUrl}')` }}
-            ></div>
-          </div>
+          <div className="flex-1 bg-teal-800 text-center hidden lg:flex rounded-r-lg">
+                        <div className="m-12 xl:m-16 w-full bg-contain bg-center bg-no-repeat"
+                            style={{ backgroundImage: `url('${loginlogo}')`}}>
+                        </div>
+                    </div>
         </div>
       </div>
     </div>
