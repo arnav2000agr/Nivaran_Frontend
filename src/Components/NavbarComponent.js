@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./Navbar.css";
-import icon from "../Assets/Images/NivaranLogoLight.png";
 import Nivaran from "../Assets/Images/NivaranIcon.png";
 import { useNavigate } from "react-router-dom";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -10,7 +9,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
   const [isFading, setFading] = useState(false);
-  const [Auth,IsAuth]=useState();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -52,7 +50,6 @@ const Navbar = () => {
   function logout(){
     localStorage.setItem("Auth",false)
     localStorage.removeItem("Auth");
-    IsAuth(false);
     navigate("/");
   }
 
@@ -151,10 +148,16 @@ const Navbar = () => {
           <div className="navbar-login px-10">
             <button onClick={login}>Login</button>
           </div>
-          {/* <div className="navbar-login">
-            <button onClick={register}>Signup</button>
-          </div> */}
-        </div>
+        </div>)
+        :
+        (
+          <div className="but">
+          <div className="navbar-login px-10">
+          <button onClick={logout}><AccountCircleIcon/>Tanya</button>  
+          </div>         
+          </div>
+
+        )}
       </nav>
     </>
   );
