@@ -1,20 +1,17 @@
 import React, { useState } from "react";
-import Nivaran from "../Assets/Images/Nivaran.png";
 import Nivaran_icon from "../Assets/Images/Nivaran_icon.png";
 import "react-phone-number-input/style.css";
 import "tailwindcss/tailwind.css";
-import Header from "../Components/Header";
 import InputAdornment from "@mui/material/InputAdornment";
 import TextField from "@mui/material/TextField";
 import PersonIcon from "@mui/icons-material/Person";
-import otp from "../Assets/Images/otp.png";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../Components/NavbarComponent";
+import AodIcon from '@mui/icons-material/Aod';
 
 const Register = () => {
-  const backgroundImageUrl =
-    "https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz";
+  const backgroundImageUrl = "https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz";
   const navigate = useNavigate();
   const [mobile, setMobile] = useState("");
   const [otp, setOtp] = useState("");
@@ -114,37 +111,19 @@ const Register = () => {
                         InputProps={{
                           startAdornment: (
                             <InputAdornment position="start">
-                              <img className="h-7 w-8" src={otp} />
+                              <AodIcon/>
                             </InputAdornment>
                           ),
                         }}
                       />
-                      <button
-                        onClick={verifyotp}
-                        className="bg-green-100 rounded"
-                      >
-                        Verify OTP
-                      </button>
                     </div>
                     
                   </div>
                   <button className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                    <svg
-                      className="w-6 h-6 -ml-2 mr-2"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                      <circle cx="8.5" cy="7" r="4" />
-                      <path d="M20 8v6M23 11h-6" />
-                    </svg>
-                    <span className="ml-">Sign In</span>
+                    <span onClick={verifyotp} className="ml-">
+                      Verfiy  OTP
+                      </span>
                   </button>
-
-                  {/* <button className="w-72 h-7 opacity-70 text-center text-teal-800 text-2xl font-normal font-['Lato']" onClick={register}>New user? Sign up.</button> */}
                 </div>
               </div>
             </div>

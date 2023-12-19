@@ -10,6 +10,8 @@ import PersonIcon from '@mui/icons-material/Person';
 import LockOpenIcon from '@mui/icons-material/LockOpen';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Components/NavbarComponent';
+import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
+import PersonAddIcon from '@mui/icons-material/PersonAdd';
 
 
 const Login = () => {
@@ -57,18 +59,14 @@ const Login = () => {
 
                                     </div>
                                     <button className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                                        <svg className="w-6 h-6 -ml-2 mr-2" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                                            <circle cx="8.5" cy="7" r="4" />
-                                            <path d="M20 8v6M23 11h-6" />
-                                        </svg>
-                                        <span className="ml-">
+                                        <PersonOutlineIcon/> 
+                                        <span className="ml-2">
                                             Sign In
                                         </span>
                                     </button>
-
-                                    <button className="w-72 h-7 opacity-70 text-center text-teal-800 text-2xl font-normal font-['Lato']" onClick={register}>New user? Sign up.</button>
-
+                                    <button className="w-full mt-2 opacity-70 text-center text-teal-800 text-lg" onClick={register}> 
+                                    <PersonAddIcon/>
+                                    <span className='ml-1  underline'> Sign up </span></button>
                                 </div>
                             </div>
                         </div>

@@ -8,9 +8,8 @@ import CentralGovt from './Pages/CentralGovt';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
-
 import StatusDetails from './Pages/StatusDetails';
-
+import SpeechArena from './Pages/SpeechArena';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 
@@ -31,6 +30,8 @@ const App = () => {
             <Route path="/grievance" element={<Grievance/>}/>
             <Route path="/status" element={<Status/>}/>
             <Route path="/statusdetails" element={<StatusDetails/>}/>
+            <Route path="/speecharena" element={<SpeechArena/>}/>
+            <Route path="/status" element={<Status/>}/>
         </Routes>
         </div>
       </Router>
