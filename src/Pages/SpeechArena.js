@@ -11,7 +11,7 @@ const SpeechArena= () => {
   const [text, setText] = useState('');
   const [isCopied, setCopied] = useState(false);
 
-  const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
+  const { transcript, resetTranscript, browserSupportsSpeechRecognition } = useSpeechRecognition();
   const startListening = () => SpeechRecognition.startListening({ continuous: true, language: 'en-IN' });
 
   if (!browserSupportsSpeechRecognition) {
@@ -33,7 +33,7 @@ const SpeechArena= () => {
       <Navbar/> 
       <div className='h-screen flex flex-col justify-center bg-gray-200 '>
         <div className='w-full flex justify-center'>
-          <p onClick={() => setText(transcript)} className='p-5 h-auto w-1/2 m-0 mb-10 text-green-800 text-md font-semibold border border-double rounded-lg  border-gray-800 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500'>
+          <p onClick={() => setText(transcript)} className='p-5 h-auto w-1/2 m-0 mb-10 text-green-800 text-md font-semibold border-2 border-double rounded-lg  border-gray-400 focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500'>
             {transcript}
           </p>
         </div>

@@ -6,12 +6,12 @@ import MyForm from './Pages/Form';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
-
-import StatusDetails from './Pages/StatusDetails';
-import SpeechArena from './Pages/SpeechArena';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
+import SpeechArena from './Pages/SpeechArena';
 import StatusTracker from './Pages/StatusTracker';
+import Reminder from './Pages/Reminder';
+import OfficialTemplate from './Pages/OfficialTemplate';
 
 const App = () => {
   localStorage.setItem("Auth",false);
@@ -33,6 +33,8 @@ const App = () => {
             <Route path="/statusdetails" element={<StatusTracker/>}/>
             <Route path="/speecharena" element={<SpeechArena/>}/>
             <Route path="/status" element={<Status/>}/>
+            <Route path="/reminder" element={<Reminder/>}/>
+            <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
         </Routes>
         </div>
       </Router>

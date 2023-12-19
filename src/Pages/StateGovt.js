@@ -81,22 +81,21 @@ const StateGovt=()=>{
 
 
     return (
-        <div className="max-w-screen flex flex-col justify-between overflow-hidden">
-        <div className="sticky top-0">
-          {" "}
-          <Navbar />{" "}
+        <div className="max-w-screen flex flex-col  overflow-hidden">
+        <div className="sticky top-0 z-10">
+          <Navbar />
         </div>
         <div>
         <table style={{ width: '100%', backgroundColor: '#e6f7ff' }}>
-      <thead>
-        <tr>
-          <th>Serial Number</th>
-          <th>Ministry Name</th>
-          <th>Officer Name</th>
-          <th>Designation</th>
-          <th>Contact Details</th>
-        </tr>
-      </thead>
+          <thead>
+            <tr>
+              <th>Serial Number</th>
+              <th>Ministry Name</th>
+              <th>Officer Name</th>
+              <th>Designation</th>
+              <th>Contact Details</th>
+            </tr>
+          </thead>
       <tbody>
         {ministriesData.map((ministry) => (
           <tr key={ministry.serialNumber}>

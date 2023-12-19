@@ -318,7 +318,7 @@ const MyForm = () => {
       "Vellore",
       "Viluppuram",
       "Virudhunagar",
-    ], 
+    ],  
   };
 
   const [formData, setFormData] = useState({
