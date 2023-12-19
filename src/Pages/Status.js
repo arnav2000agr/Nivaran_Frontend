@@ -23,7 +23,7 @@ const Status = () => {
                 </div>
             </div>
             <div className='mt-10'>
-                <button onClick={statusDetails} className='bg-green-800 hover:bg-green-900 text-white font-bold py-2 px-4 rounded'> Continue </button>
+                <button onClick={statusDetails} className='bg-blue-700 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded'> Continue </button>
             </div>
         </div>
     </div>

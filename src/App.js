@@ -9,6 +9,7 @@ import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
 import StatusDetails from './Pages/StatusDetails';
+import SpeechArena from './Pages/SpeechArena';
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/grievance" element={<Grievance/>}/>
             <Route path="/status" element={<Status/>}/>
             <Route path="/statusdetails" element={<StatusDetails/>}/>
+            <Route path="/speecharena" element={<SpeechArena/>}/>
         </Routes>
         </div>
       </Router>
