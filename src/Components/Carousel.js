@@ -4,9 +4,12 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import carousel_Image1 from '../Assets/Images/carousel_img1carousel_1.png';
 import carousel_Image2 from '../Assets/Images/Digital-India.jpg';
 import carousel_Image3 from '../Assets/Images/key_sih.png';
+import frame1 from '../Assets/Images/Frame2.png'
+import frame2 from '../Assets/Images/Frame3.png'
+import frame3 from '../Assets/Images/Frame4.png'
 
 const Carousel = () => {
-  const images = [ carousel_Image1, carousel_Image2, carousel_Image3];
+  const images = [ frame1, frame2, frame3, ];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -34,7 +37,7 @@ const Carousel = () => {
           <div className="flex h-full transition-transform ease-in-out duration-500" style={{ transform: `translateX(${-currentImage * 100}%)` }}>
             {images.map((img, i) => (
             <div key={img} className="w-full flex-shrink-0">
-              <img src={img} className="w-full h-full object-cover" alt={`carousel-img-${i}`} style={{ objectFit: 'cover' }}/>
+              <img src={img} className="w-full object-top" alt={`carousel-img-${i}`} style={{ objectFit: 'cover' }}/>
             </div>
             ))}
           </div>

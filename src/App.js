@@ -13,6 +13,7 @@ import StatusTracker from './Pages/StatusTracker';
 import Thankyou from './Pages/Thankyou';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
+import Ministry from './Pages/Ministry';
 
 
 const App = () => {
@@ -39,6 +40,7 @@ const App = () => {
             <Route path="/reminder" element={<Reminder/>}/>
             <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
             <Route path="/thankyou" element={<Thankyou/>}/>
+            <Route path="/ministry/:id" element={<Ministry/>}/>
         </Routes>
         </div>
       </Router>

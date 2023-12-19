@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Navbar from '../Components/NavbarComponent'
 import officialtemplate_image from '../Assets/Images/officialtemplate_image.png';
 import WaterfallChartIcon from '@mui/icons-material/WaterfallChart';
-import GavelIcon from '@mui/icons-material/Gavel';
+import GavelIcon from '@mui/icons-material/GavelRounded';
 
 const OfficialTemplate = () => {
     const [official, setOfficial]= useState(true);

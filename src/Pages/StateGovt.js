@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from "../Components/NavbarComponent";
+import Ministry from "./Ministry";
+import {useNavigate} from 'react-router-dom';
 
 const StateGovt=()=>{
-
+    const navigate = useNavigate();
     const ministriesData=
         [
             {
@@ -78,7 +80,12 @@ const StateGovt=()=>{
           ]
           
     
+        const [selectedMinistry, setSelectedMinistry] = useState(null);
 
+        const handleMinistrySelect = (ministry) => {
+          setSelectedMinistry(ministry);
+          navigate(`/ministry/${ministry.serialNumber}`);
+        };
 
     return (
         <div className="max-w-screen flex flex-col overflow-hidden">
@@ -100,15 +107,14 @@ const StateGovt=()=>{
         {ministriesData.map((ministry) => (
           <tr key={ministry.serialNumber}>
             <td className="p-10">{ministry.serialNumber}</td>
-            <td className="px-20">{ministry.ministryName}</td>
-            <td className="p-10">{ministry.officerName}</td>
+            <td onClick={()=>handleMinistrySelect(ministry)} className="px-20 cursor-pointer">{ministry.ministryName}</td>
+            <td className="p-10 ">{ministry.officerName}</td>
             <td className="px-20">{ministry.designation}</td>
             <td className="p-10">{ministry.contactDetails}</td>
           </tr>
         ))}
       </tbody>
     </table>
-
         </div>
       </div>
     )

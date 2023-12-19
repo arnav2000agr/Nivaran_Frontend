@@ -393,8 +393,11 @@ const MyForm = () => {
         </div>
         <Snackbar ref={snackbarRef} message={message} type={type} />
 
+        <div className="bg-gray-100 flex justify-center pt-4">
+          <h1 className="font-semibold text-lg text-gray-700 ">Enter Your Credentials</h1>
+        </div>
         <div className="max-w-screen bg-gray-100 text-gray-900 flex justify-center">
-          <form className="bg-gray-200 mt-10" onSubmit={handleSubmit}>
+          <form className="bg-gray-200 mt-4" onSubmit={handleSubmit}>
             <label>
               Name:
               <input
@@ -524,8 +527,8 @@ const MyForm = () => {
                 placeholder="Re-Enter Password"
               />
             </label>
-            <div className=" justify-center">
-              <button className="rounded w-80" type="submit">
+            <div className="flex justify-center">
+              <button className="rounded w-40 bg-blue-600 hover:bg-blue-800 p-3 text-white" type="submit">
                 Submit
               </button>
             </div>
