@@ -6,6 +6,7 @@ import MyForm from './Pages/Form';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
+
 import StatusDetails from './Pages/StatusDetails';
 import SpeechArena from './Pages/SpeechArena';
 import StateGovt from './Pages/StateGovt';
@@ -13,6 +14,7 @@ import CentralGovt from './Pages/CentralGovt';
 import StatusTracker from './Pages/StatusTracker';
 
 const App = () => {
+  localStorage.setItem("Auth",false);
   return (
     <div className="">
       <Router>
