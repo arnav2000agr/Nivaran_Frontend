@@ -21,6 +21,7 @@ const SpeechArena= () => {
   const handleCopy = () => {
     setText(transcript);
     setCopied(true);
+    console.log(text)
   };
 
   const handleReset = () => {
@@ -39,10 +40,10 @@ const SpeechArena= () => {
         </div>
 
         <div className='flex flex-col md:flex-row justify-center items-center content-center self-center p-10'>
-          <CopyToClipboard text={text} onCopy={handleCopy}>
-              <button className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  shadow-cyan-500/50   dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2 px-5'>
-              <ContentCopyIcon/>
-              {isCopied ? 'Copied!' : 'Copy to clipboard'}
+          <CopyToClipboard>
+              <button onClick={handleCopy} className='text-white bg-gradient-to-r from-cyan-400 via-cyan-500 to-cyan-600 hover:bg-gradient-to-br  shadow-cyan-500/50   dark:shadow-lg dark:shadow-cyan-800/80 font-medium rounded-lg text-sm py-2.5 text-center me-2 mb-2 px-5'>
+              
+              Submit
             </button>
           </CopyToClipboard>
 

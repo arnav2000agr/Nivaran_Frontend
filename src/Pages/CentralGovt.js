@@ -8,24 +8,29 @@ const CentralGovt=()=>{
         [
             {
               "serialNumber": 1,
-              "ministryName": "Ministry of Home Affairs",
-              "officerName": "Amit Patel",
-              "designation": "Director General",
-              "contactDetails": "amit.patel@gmail.com"
+              "ministryName": "Ministry of Education",
+              "officerName": "Preeti Patel",
+              "designation": "Secretary, Department of Education",
+              "contactDetails": "preeti.patel@outlook.com"
+           
             },
             {
               "serialNumber": 2,
-              "ministryName": "Ministry of Finance",
-              "officerName": "Neha Gupta",
-              "designation": "Secretary",
-              "contactDetails": "neha.gupta@yahoo.com"
+              "ministryName": "Ministry of Railways",
+              "officerName": "Arjun Khanna",
+              "designation": "Chairman, Railway Board",
+              "contactDetails": "arjun.khanna@gmail.com"
+            
+             
             },
             {
               "serialNumber": 3,
               "ministryName": "Ministry of External Affairs",
-              "officerName": "Vikram Singh",
-              "designation": "Foreign Secretary",
-              "contactDetails": "vikram.singh@outlook.com"
+              "ministryName": "Ministry of Commerce and Industry",
+              "officerName": "Sneha Kapoor",
+              "designation": "Secretary, Department of Commerce",
+              "contactDetails": "sneha.kapoor@yahoo.com"
+              
             },
             {
               "serialNumber": 4,
@@ -43,24 +48,24 @@ const CentralGovt=()=>{
             },
             {
               "serialNumber": 6,
-              "ministryName": "Ministry of Education",
-              "officerName": "Preeti Patel",
-              "designation": "Secretary, Department of Education",
-              "contactDetails": "preeti.patel@outlook.com"
+              "ministryName": "Ministry of Home Affairs",
+              "officerName": "Amit Patel",
+              "designation": "Director General",
+              "contactDetails": "amit.patel@gmail.com"
             },
             {
               "serialNumber": 7,
-              "ministryName": "Ministry of Railways",
-              "officerName": "Arjun Khanna",
-              "designation": "Chairman, Railway Board",
-              "contactDetails": "arjun.khanna@gmail.com"
+              "ministryName": "Ministry of Finance",
+              "officerName": "Neha Gupta",
+              "designation": "Secretary",
+              "contactDetails": "neha.gupta@yahoo.com"
             },
             {
               "serialNumber": 8,
               "ministryName": "Ministry of Commerce and Industry",
-              "officerName": "Sneha Kapoor",
-              "designation": "Secretary, Department of Commerce",
-              "contactDetails": "sneha.kapoor@yahoo.com"
+              "officerName": "Vikram Singh",
+              "designation": "Foreign Secretary",
+              "contactDetails": "vikram.singh@outlook.com"
             },
             {
               "serialNumber": 9,
@@ -88,7 +93,7 @@ const CentralGovt=()=>{
           <Navbar />{" "}
         </div>
         <div>
-        <table style={{ width: '100%', backgroundColor: '#e6f7ff' }}>
+        <table className="bg-gray-200 w-full">
       <thead>
         <tr>
           <th>Serial Number</th>

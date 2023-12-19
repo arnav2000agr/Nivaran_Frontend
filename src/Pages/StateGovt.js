@@ -81,12 +81,12 @@ const StateGovt=()=>{
 
 
     return (
-        <div className="max-w-screen flex flex-col  overflow-hidden">
+        <div className="max-w-screen flex flex-col overflow-hidden">
         <div className="sticky top-0 z-10">
           <Navbar />
         </div>
-        <div>
-        <table style={{ width: '100%', backgroundColor: '#e6f7ff' }}>
+        <div className="bg-gray-200">
+        <table className="w-full ">
           <thead>
             <tr>
               <th>Serial Number</th>

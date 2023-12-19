@@ -43,6 +43,8 @@ const Login = () => {
         localStorage.setItem("Auth",true);
        
         localStorage.setItem("User",response.data.ispresent._id)
+        // console.log(response.data.token)
+        localStorage.setItem("bearer",response.data.token)
        
         setTimeout(() => {
             navigate("/")
