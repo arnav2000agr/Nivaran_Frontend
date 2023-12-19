@@ -5,10 +5,16 @@ import "tailwindcss/tailwind.css";
 import "./Form.css";
 import Navbar from "../Components/NavbarComponent";
 import axios from "axios";
+import Snackbar from "../Components/Snackbar";
+import { useRef } from "react";
 
 const MyForm = () => {
   const backgroundImageUrl =
     "https://drive.google.com/uc?export=view&id=1KZ_Ub_2lZ0dHbKV0fAIhxVhiQA183RCz";
+    const snackbarRef = useRef(null);
+    const [message, setMessage] = useState("");
+    const [show, setShow] = useState(true);
+    const [type,setType] = useState("");
   const indianStates = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -320,7 +326,7 @@ const MyForm = () => {
       "Virudhunagar",
     ],  
   };
-
+  const [pass,setPass]=useState({password2:""});
   const [formData, setFormData] = useState({
     name: "",
     aadharnumber: "",
@@ -340,22 +346,40 @@ const MyForm = () => {
   };
 
   const handleCheck = (e) => {
-    if (e.target === formData.password) alert("Password matched!");
+    const { name,value}=e.target;
+    setPass((prevData)=>({...prevData,[name]:value}))
   };
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
+    if(pass.password2===formData.password)
+    {
+    
     console.log(formData)
     axios.post("http://localhost:8080/api/users/create",
       formData
     )
     .then(function(response){
       console.log(response)
-      alert("Data submitted");
+      setMessage("Data submitted successfully");
+      setType("success");
+      snackbarRef.current.show();
+      setShow(true);
     })
     .catch(function(error){
-      alert(error)
+      setMessage("Error via server side");
+        setType("fail");
+        snackbarRef.current.show();
+        setShow(true);
 
     })
+  }
+  else
+  {
+    setMessage("Passwords don't match!!");
+        setType("fail");
+        snackbarRef.current.show();
+        setShow(true);
+  }
     
     
   };
@@ -367,6 +391,7 @@ const MyForm = () => {
           {" "}
           <Navbar />{" "}
         </div>
+        <Snackbar ref={snackbarRef} message={message} type={type} />
 
         <div className="max-w-screen bg-gray-100 text-gray-900 flex justify-center">
           <form onSubmit={handleSubmit}>
@@ -389,6 +414,8 @@ const MyForm = () => {
                 name="aadharnumber"
                 value={formData.aadharnumber}
                 onChange={handleChange}
+                minLength={12}
+                maxLength={12}
                 
               />
             </label>
@@ -491,7 +518,9 @@ const MyForm = () => {
               Confirm Password:
               <input
                 type="password"
-                name="password"
+                name="password2"
+                value={pass.password2}
+                onChange={handleCheck}
                 placeholder="Re-Enter Password"
               />
             </label>

@@ -4,6 +4,7 @@ import MicIcon from '@mui/icons-material/Mic';
 import AttachmentIcon from '@mui/icons-material/Attachment';
 import SpeechArena from './SpeechArena';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const Grievance = () => {
   const navigate = useNavigate();
@@ -19,7 +20,6 @@ const Grievance = () => {
   const handleFileUpload = () => {
     const selectedFile = fileInputRef.current.files[0];
     console.log('Selected File:', selectedFile);
-    // Perform file upload logic here
   };
 
   return (
