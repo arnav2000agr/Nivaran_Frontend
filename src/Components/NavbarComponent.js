@@ -234,14 +234,32 @@ const Navbar = () => {
             </div>
           </div>
         ) : (
-          <div className="but">
-            <div className="navbar-login px-10">
-              <button onClick={logout}>
-                <AccountCircleIcon />
-                Tanya
-              </button>
+          <>
+          <ul className={`navbar-menu ${isMenuOpen ? "open" : "closed"}`}>
+          <li className="navbar-item">
+            <a className="px-8 flex items-center">
+              <ExpandMoreIcon/>
+              Tanya
+              <AccountCircleIcon/>
+            </a>
+            <div className="navbar-dropdown">
+              <ol className="">
+                <li>
+                  <button className="font-semibold text-md text-gray-600 py-1">
+                    Profile
+                  </button>
+                </li>
+                <li>
+                  <button onClick={logout} className="font-semibold text-md text-gray-600 py-1">
+                    Logout
+                  </button>
+                </li>
+              </ol>
             </div>
-          </div>
+          </li>
+          </ul>
+          </>
+          
         )}
       </nav>
     </>
