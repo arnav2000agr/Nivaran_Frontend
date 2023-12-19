@@ -18,7 +18,7 @@ const Navbar = () => {
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [auth, setAuth] = useState(localStorage.getItem("Auth"));
-  const [auth, setAuth] = useState(localStorage.getItem("Auth"));
+  
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
   const [isFading, setFading] = useState(false);
   const navigate = useNavigate();
@@ -109,7 +109,7 @@ const Navbar = () => {
         <div className={`navbar-hamburger`} onClick={toggleMenu}>
           {isMenuOpen ? (
             <div className={`navbar-menu ${isMenuOpen ? "closed" : " "}`}></div>
-            <div className={`navbar-menu ${isMenuOpen ? "closed" : " "}`}></div>
+            
           ) : (
             <>
               <div
