@@ -92,8 +92,8 @@ const StateGovt=()=>{
         <div className="sticky top-0 z-10">
           <Navbar />
         </div>
-        <div className="bg-gray-200">
-        <table className="w-full ">
+        <div className="bg-gray-200 p-4 text-lg">
+        <table className="w-full">
           <thead>
             <tr>
               <th>Serial Number</th>
@@ -105,12 +105,12 @@ const StateGovt=()=>{
           </thead>
       <tbody>
         {ministriesData.map((ministry) => (
-          <tr key={ministry.serialNumber}>
-            <td className="p-10">{ministry.serialNumber}</td>
-            <td onClick={()=>handleMinistrySelect(ministry)} className="px-20 cursor-pointer">{ministry.ministryName}</td>
-            <td className="p-10 ">{ministry.officerName}</td>
-            <td className="px-20">{ministry.designation}</td>
-            <td className="p-10">{ministry.contactDetails}</td>
+          <tr key={ministry.serialNumber} className="text-gray-800 text-md">
+            <td className="p-4">{ministry.serialNumber}</td>
+            <td onClick={()=>handleMinistrySelect(ministry)} className="p-4 hover:text-teal-900 hover:text-lg cursor-pointer">{ministry.ministryName}</td>
+            <td className="p-4">{ministry.officerName}</td>
+            <td className="p-4">{ministry.designation}</td>
+            <td className="p-4">{ministry.contactDetails}</td>
           </tr>
         ))}
       </tbody>
