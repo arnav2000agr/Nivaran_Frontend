@@ -18,6 +18,7 @@ const Navbar = () => {
   ];
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [auth, setAuth] = useState(localStorage.getItem("Auth"));
+  
   const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0);
   const [isFading, setFading] = useState(false);
   const navigate = useNavigate();
@@ -26,6 +27,9 @@ const Navbar = () => {
     const intervalId = setInterval(() => {
       setFading(true);
       setTimeout(() => {
+        setCurrentLanguageIndex(
+          (prevIndex) => (prevIndex + 1) % languages.length
+        );
         setCurrentLanguageIndex(
           (prevIndex) => (prevIndex + 1) % languages.length
         );
@@ -70,11 +74,16 @@ const Navbar = () => {
     navigate("/reminder");
   }
 
-
   return (
     <>
       <div className="p-2 flex flex-row justify-between bg-gray-100">
         <div className="p-2 text-white h-20">
+          <img
+            className="h-full object-cover cursor-pointer"
+            onClick={home}
+            src="https://pgportal.gov.in/Images/iconHome/logo.png"
+            alt=""
+          />
           <img
             className="h-full object-cover cursor-pointer"
             onClick={home}
@@ -93,12 +102,28 @@ const Navbar = () => {
           <h1 className={`nivaran ${isFading ? "fade" : ""}`} onClick={home}>
             {languages[currentLanguageIndex]}
           </h1>
+          <h1 className={`nivaran ${isFading ? "fade" : ""}`} onClick={home}>
+            {languages[currentLanguageIndex]}
+          </h1>
         </div>
         <div className={`navbar-hamburger`} onClick={toggleMenu}>
           {isMenuOpen ? (
             <div className={`navbar-menu ${isMenuOpen ? "closed" : " "}`}></div>
+            
           ) : (
             <>
+              <div
+                onClick={toggleMenu}
+                className={`bar ${isMenuOpen ? "open" : ""}`}
+              ></div>
+              <div
+                onClick={toggleMenu}
+                className={`bar ${isMenuOpen ? "open" : ""}`}
+              ></div>
+              <div
+                onClick={toggleMenu}
+                className={`bar ${isMenuOpen ? "open" : ""}`}
+              ></div>
               <div
                 onClick={toggleMenu}
                 className={`bar ${isMenuOpen ? "open" : ""}`}
@@ -129,6 +154,12 @@ const Navbar = () => {
                   </button>
                 </li>
                 <li>
+                  <button
+                    onClick={status}
+                    className="font-semibold text-md text-gray-600 py-1"
+                  >
+                    View Status
+                  </button>
                   <button
                     onClick={status}
                     className="font-semibold text-md text-gray-600 py-1"

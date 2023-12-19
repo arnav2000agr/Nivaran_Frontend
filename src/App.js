@@ -6,15 +6,17 @@ import MyForm from './Pages/Form';
 import Grievance from './Pages/Grievance';
 import Register from './Pages/Register';
 import Status from './Pages/Status';
+import SpeechArena from './Pages/SpeechArena';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
-import SpeechArena from './Pages/SpeechArena';
-import StatusTracker from './Pages/StatusTracker';
 import Reminder from './Pages/Reminder';
 import OfficialTemplate from './Pages/OfficialTemplate';
+import StatusTracker from './Pages/StatusTracker';
+import Thankyou from './Pages/Thankyou';
+
 
 const App = () => {
-  // localStorage.setItem("Auth",false);
+
   localStorage.setItem("Language","English");
   return (
     <div className="">
@@ -36,6 +38,7 @@ const App = () => {
             <Route path="/status" element={<Status/>}/>
             <Route path="/reminder" element={<Reminder/>}/>
             <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
+            <Route path="/thankyou" element={<Thankyou/>}/>
         </Routes>
         </div>
       </Router>

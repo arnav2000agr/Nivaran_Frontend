@@ -70,10 +70,12 @@ const Register = () => {
         setType("success");
         snackbarRef.current.show();
         setShow(true);
+        localStorage.setItem("User",response.data._id)
+        // localStorage.setItem("bearer",response.data.token)
         setTimeout(() => {
           navigate("/form")
           
-        }, 4000);
+        }, 2000);
         
       })
       .catch(function (error) {
@@ -150,8 +152,8 @@ const Register = () => {
                     
                   </div>
                   <button className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                    <span onClick={verifyotp} className="ml-">
-                      Verfiy  OTP
+                    <span onClick={verifyotp} className="">
+                      Verify  OTP
                       </span>
                   </button>
                 </div>

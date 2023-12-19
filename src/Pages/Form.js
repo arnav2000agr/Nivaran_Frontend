@@ -394,7 +394,7 @@ const MyForm = () => {
         <Snackbar ref={snackbarRef} message={message} type={type} />
 
         <div className="max-w-screen bg-gray-100 text-gray-900 flex justify-center">
-          <form onSubmit={handleSubmit}>
+          <form className="bg-gray-200 mt-10" onSubmit={handleSubmit}>
             <label>
               Name:
               <input
