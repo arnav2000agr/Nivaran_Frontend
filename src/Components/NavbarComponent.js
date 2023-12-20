@@ -63,6 +63,9 @@ const Navbar = () => {
   function status() {
     navigate("/status");
   }
+  function dash(){
+    navigate("/dashboard")
+  }
   function logout() {
     localStorage.setItem("Auth", false);
     localStorage.removeItem("Auth");
@@ -245,7 +248,7 @@ const Navbar = () => {
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={dash} className="font-semibold text-md text-gray-600 py-1">
                     Profile
                   </button>
                 </li>

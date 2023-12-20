@@ -72,7 +72,7 @@ const Register = () => {
         snackbarRef.current.show();
         setShow(true);
         localStorage.setItem("User",response.data._id)
-        // localStorage.setItem("bearer",response.data.token)
+        localStorage.setItem("bearer",response.data.token)
         setTimeout(() => {
           navigate("/form")
           
