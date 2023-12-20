@@ -1,9 +1,7 @@
 import * as React from 'react';
-import * as React from 'react';
 import Navbar from '../Components/NavbarComponent';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
-import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
 
 const data = [
