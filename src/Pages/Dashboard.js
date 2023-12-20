@@ -1,5 +1,8 @@
 import * as React from 'react';
+import * as React from 'react';
 import Navbar from '../Components/NavbarComponent';
+import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
+
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
 
@@ -8,6 +11,7 @@ const data = [
   { label: 'Group B', value: 3,},
   { label: 'Group C', value: 5,},
 ];
+
 
 
 const Dashboard = () => {
