@@ -3,11 +3,13 @@ import Navbar from '../Components/NavbarComponent';
 import { PieChart, Pie, Cell, ResponsiveContainer, Label } from 'recharts';
 
 
+
 const data = [
   { label: 'Group A', value: 2,},
   { label: 'Group B', value: 3,},
   { label: 'Group C', value: 5,},
 ];
+
 
 
 const Dashboard = () => {

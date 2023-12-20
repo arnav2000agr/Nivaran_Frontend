@@ -76,6 +76,15 @@ const Navbar = () => {
   function reminder(){
     navigate("/reminder");
   }
+  function dashboard(){
+    navigate("/dashboard")
+  }
+  function contactus(){
+    navigate("/contactus");
+  }
+  function feedback(){
+    navigate("/feedback");
+  }
 
   return (
     <>
@@ -217,12 +226,12 @@ const Navbar = () => {
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={contactus} className="font-semibold text-md text-gray-600 py-1">
                     Contact us
                   </button>
                 </li>
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={feedback} className="font-semibold text-md text-gray-600 py-1">
                     Feedback
                   </button>
                 </li>
@@ -248,7 +257,7 @@ const Navbar = () => {
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button onClick={dash} className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={dashboard} className="font-semibold text-md text-gray-600 py-1">
                     Profile
                   </button>
                 </li>

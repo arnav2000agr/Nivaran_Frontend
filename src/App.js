@@ -14,7 +14,10 @@ import Dashboard from './Pages/Dashboard';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Ministry from './Pages/Ministry';
-import Thankyou from './Pages/Thankyou';
+import Feedback from './Pages/Feedback';
+import ContactUs from './Pages/ContactUs';
+import Thankyou from './Pages/Thankyou'
+import Dashboard_superuser from './Pages/Dashboard_superuser';
 
 
 const App = () => {
@@ -42,7 +45,10 @@ const App = () => {
             <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
             <Route path="/thankyou" element={<Thankyou/>}/>
             <Route path="/ministry/:id" element={<Ministry/>}/>
-            <Route path="/dashboard" element={<Dashboard/>}/>
+            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path="/feedback" element={<Feedback/>}/>
+            <Route path='/contactus' element={<ContactUs/>}/>
+            <Route path='/superuser' element={<Dashboard_superuser/>}/>
         </Routes>
         </div>
       </Router>

@@ -60,7 +60,7 @@ const OfficialTemplate = () => {
             <img src={officialtemplate_image} className='object-contain h-96 w-96'  alt="" />
         </div>
 
-        <div className='h-full w-2/3 flex flex-col justify-center items-center'>
+        <div className='w-2/3 flex flex-col justify-center items-center'>
 
             <div className='w-full p-3 flex flex-row bg-gray-200  justify-around rounded-t-md'>
                 <button onClick={handleOfficial} className='flex justify-center text-white bg-teal-700 hover:bg-teal-800 p-3 mx-1 rounded-md'>
@@ -91,7 +91,7 @@ const OfficialTemplate = () => {
             
 
             {/* <button>Language Select</button> */}
-            <button onClick={home} className='flex justify-center items-center w-20 h-10 p-3 bg-blue-800 hover:bg-blue-900 rounded-lg  text-white'>Submit</button>
+            <button onClick={thankyou} className='flex justify-center items-center w-20 h-10 p-3 bg-blue-800 hover:bg-blue-900 rounded-lg  text-white'>Submit</button>
 
         </div>
       </div>
