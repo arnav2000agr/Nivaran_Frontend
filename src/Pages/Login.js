@@ -22,7 +22,8 @@ const Login = () => {
 
     const [data,setData]=useState({
         mobilenumber:"",
-        password:""
+        password:"",
+        role:""
     });
     const snackbarRef = useRef(null);
     const [message, setMessage] = useState("");
@@ -101,7 +102,18 @@ const Login = () => {
                                                 <LockOpenIcon />
                                             </InputAdornment>),}}/>
                                         </div>
+                                        <div>
                                         
+              <select
+                name="gender"
+               
+              >
+                <option value="">Select User</option>
+                <option value="superadmin">SuperUser</option>
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+              </select>
+                                        </div>
 
                                     </div>
                                     <button onClick={login} className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
