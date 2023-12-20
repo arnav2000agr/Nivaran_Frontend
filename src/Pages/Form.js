@@ -7,6 +7,7 @@ import Navbar from "../Components/NavbarComponent";
 import axios from "axios";
 import Snackbar from "../Components/Snackbar";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MyForm = () => {
   const backgroundImageUrl =
@@ -15,6 +16,7 @@ const MyForm = () => {
     const [message, setMessage] = useState("");
     const [show, setShow] = useState(true);
     const [type,setType] = useState("");
+    const navigate=useNavigate()
   const indianStates = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -364,6 +366,10 @@ const MyForm = () => {
       setType("success");
       snackbarRef.current.show();
       setShow(true);
+      setTimeout(() => {
+        navigate("/")
+        
+      }, 2000);
     })
     .catch(function(error){
       setMessage("Error via server side");

@@ -77,22 +77,21 @@ const StateGovt=()=>{
               "designation": "Secretary, Ministry of Environment",
               "contactDetails": "nisha.verma@outlook.com"
             }
-          ]
-          
-    
-        const [selectedMinistry, setSelectedMinistry] = useState(null);
+    ]
 
-        const handleMinistrySelect = (ministry) => {
-          setSelectedMinistry(ministry);
-          navigate(`/ministry/${ministry.serialNumber}`);
-        };
+    const [selectedMinistry, setSelectedMinistry] = useState(null);
+
+    const handleMinistrySelect = (ministry) => {
+      setSelectedMinistry(ministry);
+      navigate(`/ministry/${ministry.serialNumber}`);
+    };
 
     return (
         <div className="max-w-screen flex flex-col overflow-hidden">
         <div className="sticky top-0 z-10">
           <Navbar />
         </div>
-        <div className="bg-gray-200 p-4 text-lg">
+        <div className="bg-gray-100 p-4 text-lg">
         <table className="w-full">
           <thead>
             <tr>

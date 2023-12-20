@@ -63,6 +63,9 @@ const Navbar = () => {
   function status() {
     navigate("/status");
   }
+  function dash(){
+    navigate("/dashboard")
+  }
   function logout() {
     localStorage.setItem("Auth", false);
     localStorage.removeItem("Auth");
@@ -75,6 +78,12 @@ const Navbar = () => {
   }
   function dashboard(){
     navigate("/dashboard")
+  }
+  function contactus(){
+    navigate("/contactus");
+  }
+  function feedback(){
+    navigate("/feedback");
   }
 
   return (
@@ -217,12 +226,12 @@ const Navbar = () => {
             <div className="navbar-dropdown">
               <ol className="">
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={contactus} className="font-semibold text-md text-gray-600 py-1">
                     Contact us
                   </button>
                 </li>
                 <li>
-                  <button className="font-semibold text-md text-gray-600 py-1">
+                  <button onClick={feedback} className="font-semibold text-md text-gray-600 py-1">
                     Feedback
                   </button>
                 </li>

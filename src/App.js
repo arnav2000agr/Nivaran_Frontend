@@ -10,11 +10,11 @@ import SpeechArena from './Pages/SpeechArena';
 import Reminder from './Pages/Reminder';
 import OfficialTemplate from './Pages/OfficialTemplate';
 import StatusTracker from './Pages/StatusTracker';
-import Thankyou from './Pages/Thankyou';
+import Dashboard from './Pages/Dashboard';
 import StateGovt from './Pages/StateGovt';
 import CentralGovt from './Pages/CentralGovt';
 import Ministry from './Pages/Ministry';
-import Dashboard from './Pages/Dashboard';
+import Thankyou from './Pages/Thankyou';
 
 
 const App = () => {
@@ -42,7 +42,7 @@ const App = () => {
             <Route path="/officialtemplate" element={<OfficialTemplate/>}/>
             <Route path="/thankyou" element={<Thankyou/>}/>
             <Route path="/ministry/:id" element={<Ministry/>}/>
-            <Route path='/dashboard' element={<Dashboard/>}/>
+            <Route path="/dashboard" element={<Dashboard/>}/>
         </Routes>
         </div>
       </Router>

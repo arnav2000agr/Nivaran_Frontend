@@ -40,14 +40,15 @@ const Login = () => {
         setType("success");
         snackbarRef.current.show();
         setShow(true);
-        localStorage.setItem("Auth",true);
-       
+        localStorage.setItem("Auth",true);       
         localStorage.setItem("User",response.data.ispresent._id)
+        localStorage.setItem("bearer",response.data.token)
+        localStorage.setItem("user",response.data.ispresent)
        
         setTimeout(() => {
             navigate("/")
             
-          }, 4000);
+          }, 2500);
 
    })
    .catch(function(error){
@@ -100,6 +101,7 @@ const Login = () => {
                                                 <LockOpenIcon />
                                             </InputAdornment>),}}/>
                                         </div>
+                                        
 
                                     </div>
                                     <button onClick={login} className="mt-4 tracking-wide font-semibold bg-gray-800 text-white w-full py-2 rounded-lg hover:bg-green-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">

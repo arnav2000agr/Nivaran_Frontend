@@ -19,6 +19,7 @@ const Reminder = () => {
     .then(function(response){
       console.log(response.data.user.grievances);
       setData(response.data.user.grievances)
+      localStorage.setItem("grievances",data);
       
     })
     .catch(function(error){
